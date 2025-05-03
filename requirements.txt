@@ -6,3 +6,4 @@ setuptools
 matplotlib
 joblib
 xgboost
+flask

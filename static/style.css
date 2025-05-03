@@ -1,0 +1,121 @@
+/* style.css */
+
+/* Import Poppins in case the Google link fails */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ABE2 0%, #5563DE 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #2C3E50;
+  text-align: center;
+}
+
+/* Two-column grid for form fields */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;       /* 20px row-gap, 30px column-gap */
+  align-items: start;
+}
+
+/* Form group styling */
+.form-group {
+  margin: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #34495E;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"]:focus {
+  outline: none;
+  border-color: #5563DE;
+}
+
+/* Submit button spans both columns */
+button[type="submit"] {
+  grid-column: 1 / -1;
+  background: #5563DE;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background: #3F51B5;
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Prediction box spans both columns */
+.prediction-box {
+  grid-column: 1 / -1;
+  margin-top: 25px;
+  background: #F0F4FF;
+  border-left: 4px solid #5563DE;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.prediction-box h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  button[type="submit"] {
+    padding: 10px;
+  }
+}
